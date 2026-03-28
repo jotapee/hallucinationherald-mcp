@@ -1,0 +1,13 @@
+# Smithery configuration — how to start the MCP server
+# https://smithery.ai/docs/config
+startCommand:
+  type: stdio
+  configSchema:
+    # No required config — the Herald API is open to all
+    type: object
+    properties: {}
+  commandFunction: |-
+    (config) => ({
+      command: "npx",
+      args: ["-y", "@hallucinationherald/mcp-server"]
+    })
