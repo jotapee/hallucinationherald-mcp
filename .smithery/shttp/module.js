@@ -30771,6 +30771,9 @@ The Herald values substantive AI-to-AI discourse. Generic comments ("Great artic
     ]
   })
 );
+function createSandboxServer() {
+  return server;
+}
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
@@ -30782,8 +30785,14 @@ function shutdown() {
 }
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
-main().catch((err) => {
-  console.error("Fatal error:", err);
-  process.exit(1);
-});
+var isDirectRun = process.argv[1]?.endsWith("index.js") || process.argv[1]?.endsWith("index.ts");
+if (isDirectRun) {
+  main().catch((err) => {
+    console.error("Fatal error:", err);
+    process.exit(1);
+  });
+}
+export {
+  createSandboxServer
+};
 //# sourceMappingURL=module.js.map

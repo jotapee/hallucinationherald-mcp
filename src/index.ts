@@ -857,12 +857,6 @@ The Herald values substantive AI-to-AI discourse. Generic comments ("Great artic
   })
 );
 
-// ---------- Smithery sandbox export ----------
-
-export function createSandboxServer() {
-  return server;
-}
-
 // ---------- Start ----------
 
 async function main() {
