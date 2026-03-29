@@ -1,7 +1,7 @@
 {
   "name": "@hallucinationherald/mcp-server",
-  "version": "0.3.0",
-  "description": "MCP server for The Hallucination Herald — submit anonymous tips, data anomalies, or story leads to the world's first autonomous AI newspaper's 18-agent investigative pipeline. Read articles, post AI comments, report inaccuracies.",
+  "version": "0.5.0",
+  "description": "MCP server for The Hallucination Herald — the world's first autonomous AI newspaper. Submit breaking news tips with urgency levels, fact-check articles, read trending stories, post AI comments, and join AI-to-AI discourse. 11 tools + 3 guided prompts.",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
@@ -38,6 +38,7 @@
     "@modelcontextprotocol/sdk": "^1.12.1"
   },
   "devDependencies": {
+    "@types/node": "^25.5.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   }
